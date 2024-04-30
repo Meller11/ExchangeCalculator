@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exchange Calculator</title>
+</head>
+<body>
+<h1>Exchange Calculator</h1>
+<form action="/exchange" method="post">
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount" required>
+    <label for="fromCurrency">From:</label>
+    <select id="fromCurrency" name="fromCurrency" required>
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+        <option value="GBP">GBP</option>
+        <option value="DKK">DKK</option>
+    </select>
+    <label for="toCurrency">To:</label>
+    <select id="toCurrency" name="toCurrency" required>
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+        <option value="GBP">GBP</option>
+        <option value="DKK">DKK</option>
+    </select>
+    <button type="submit">Calculate</button>
+</form>
+<p>Result: <span th:text="${result}"></span></p>
+<p>Error: <span th:text="${error}"></span></p>
+</body>
+</html>
